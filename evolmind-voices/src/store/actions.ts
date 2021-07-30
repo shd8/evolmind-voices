@@ -4,11 +4,11 @@ import { State } from '@/types/interfaces';
 
 const actions = {
   async fetchVoices({ commit }:ActionContext<State, State>): Promise<void> {
-    const { data } = await axios.get('../assets/voice.json');
+    const { data } = await axios.get('');
 
     console.log(data);
 
-    commit('updateProducts', data);
+    commit('updateVoices', data);
   },
 };
 
