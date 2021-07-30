@@ -1,14 +1,12 @@
-import axios from 'axios';
 import { ActionContext } from 'vuex';
 import { State } from '@/types/interfaces';
+import VOICES from '@/assets/voices.json';
 
 const actions = {
   async fetchVoices({ commit }:ActionContext<State, State>): Promise<void> {
-    const { data } = await axios.get('');
+    console.log(VOICES);
 
-    console.log(data);
-
-    commit('updateVoices', data);
+    commit('updateVoices', VOICES);
   },
 };
 
