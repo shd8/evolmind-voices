@@ -28,6 +28,10 @@ export default defineComponent({
       'fetchVoices',
     ]),
   },
+
+  mounted() {
+    this.fetchVoices();
+  },
 });
 </script>
 

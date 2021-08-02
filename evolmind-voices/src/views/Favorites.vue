@@ -3,7 +3,7 @@
     <h1>This is a favorites page</h1>
     <button @click="fetchVoices">Load voices</button>
     <ul
-    v-for='voice in voices'
+    v-for='voice in favorites'
     :key="voice.id">
       <li>
         <VoiceIcon
@@ -31,7 +31,7 @@ export default defineComponent({
 
   computed: {
     ...mapState([
-      'voices',
+      'favorites',
     ]),
   },
 
