@@ -100,7 +100,7 @@ table {
 }
 
 .container {
-  padding-top: 5em;
+  padding-top: 8em;
 }
 
 html {
@@ -108,5 +108,9 @@ html {
   p {
     color: $details;
   }
+}
+
+em:before {
+  color: inherit;
 }
 </style>

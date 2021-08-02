@@ -12,6 +12,15 @@ const mutations = {
       ? state.favorites = state.favorites.filter((favorite) => favorite.id !== payload.id)
       : state.favorites.push(payload);
   },
+
+  sortByAlphabet(state: State): void {
+    state.voices.sort((a, b) => (a.name > b.name ? 1 : -1));
+  },
+
+  sortByAlphabetReverse(state: State): void {
+    state.voices.sort((a, b) => (a.name > b.name ? 1 : -1)).reverse();
+  },
+
 };
 
 export default mutations;

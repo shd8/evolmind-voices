@@ -16,6 +16,14 @@
           />
           <em class="far fa-play-circle" />
         </div>
+        <em
+        class="fas fa-sort-alpha-up"
+        @click="sortByAlphabet"
+        />
+        <em
+        class="fas fa-sort-alpha-down-alt"
+        @click="sortByAlphabetReverse"
+        />
           <router-link to="/favorites" @click="scrollToTop">
             <em class="far fa-heart" />
         </router-link>
@@ -27,7 +35,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { mapGetters, mapState } from 'vuex';
+import { mapGetters, mapMutations, mapState } from 'vuex';
 import { Voice } from '@/types/interfaces';
 
 interface Data {
@@ -46,6 +54,11 @@ export default defineComponent({
     ]),
   },
   methods: {
+    ...mapMutations([
+      'sortByAlphabet',
+      'sortByAlphabetReverse',
+    ]),
+
     scrollToTop() {
       window.scrollTo(0, 0);
     },
@@ -77,7 +90,17 @@ export default defineComponent({
 @import '../styles/_colors.scss';
 @import '../assets/_global-styles.scss';
 
-.fa-home {
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.fa-home,
+.fa-heart,
+.fa-play-circle,
+.fa-sort-alpha-up,
+.fa-sort-alpha-down-alt {
+  cursor: pointer;
   font-size: 2em;
   padding: 0.25em;
 }
@@ -93,10 +116,24 @@ export default defineComponent({
 }
 
 .header {
-    background-color: $base;
-    position: fixed;
-    width: 100%;
-    z-index: 99;
+  background-color: $base;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+
+em {
+  color: $gray;
+}
+
+.fa-home,
+.fa-heart,
+.fa-play-circle,
+.fa-sort-alpha-up,
+.fa-sort-alpha-down-alt {
+  &:hover {
+    color: $details;
+  }
 }
 
 </style>

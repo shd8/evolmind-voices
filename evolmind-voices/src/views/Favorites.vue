@@ -36,3 +36,11 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss">
+
+p {
+  padding-top: 2em;
+}
+
+</style>
