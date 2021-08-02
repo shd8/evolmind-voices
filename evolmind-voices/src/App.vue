@@ -92,5 +92,9 @@ table {
 
 html {
   background-color: $base;
+  p {
+    color: $details;
+  }
+
 }
 </style>
