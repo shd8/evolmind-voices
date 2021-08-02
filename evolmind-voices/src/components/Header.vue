@@ -78,11 +78,13 @@ export default defineComponent({
 @import '../assets/_global-styles.scss';
 
 .nav {
-    padding: 1em 1em 0.5em 1em;
+  padding: 1em 1em 0.5em 1em;
 
-    &__buttons {
-        display: flex;
-    }
+  &__buttons {
+    display: flex;
+    width: 100%;
+    place-content: space-between;
+  }
 }
 
 .header {
