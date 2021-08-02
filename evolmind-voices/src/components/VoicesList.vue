@@ -1,4 +1,5 @@
 <template>
+  <span>{{list.length}}</span>
   <ul>
     <li
       v-for='voice in list'
