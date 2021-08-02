@@ -4,10 +4,7 @@
       v-for='voice in list'
       :key="voice.id">
       <VoiceIcon
-      :id="voice.id"
-      :name="voice.name"
-      :icon="voice.icon"
-      :tags="voice.tags"
+      :voice="voice"
       />
       </li>
     </ul>

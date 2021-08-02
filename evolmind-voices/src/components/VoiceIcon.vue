@@ -1,27 +1,27 @@
 <template>
   <div>
     <img
-    :src="require(`../assets/${icon}`)"
+    :src="require(`../assets/${voice.icon}`)"
     :alt="icon"
-    @click="oneAlert"
+    @click="updateFavorites(voice)"
     >
-    <span>{{name}}</span>
+    <span>{{voice.name}}</span>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { mapMutations } from 'vuex';
 
 export default defineComponent({
   name: 'VoiceIcon',
-  props: ['id', 'name', 'icon', 'tags'],
+  props: ['voice'],
 
   methods: {
-    oneAlert() {
-      alert('hola');
-    },
+    ...mapMutations([
+      'updateFavorites',
+    ]),
   },
-
 });
 </script>
 
