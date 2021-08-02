@@ -1,24 +1,13 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <ul
-    v-for='voice in voices'
-    :key="voice.id">
-      <li>
-        <VoiceIcon
-        :id="voice.id"
-        :name="voice.name"
-        :icon="voice.icon"
-        :tags="voice.tags"
-        />
-      </li>
-    </ul>
+    <VoicesList :list="voices"/>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import VoiceIcon from '@/components/VoiceIcon.vue';
+import VoicesList from '@/components/VoicesList.vue';
 import { mapState } from 'vuex';
 
 export default defineComponent({
@@ -31,7 +20,7 @@ export default defineComponent({
   },
 
   components: {
-    VoiceIcon,
+    VoicesList,
   },
 });
 </script>
