@@ -6,8 +6,10 @@ interface Voice {
 }
 
 interface State {
-    voices: Array<Voice>
-    favorites: Array<Voice>
+    voices: Array<Voice>,
+    favorites: Array<Voice>,
+    filteredVoices: Array<Voice>,
+    filteredFavorites: Array<Voice>
 }
 
 export { Voice, State };

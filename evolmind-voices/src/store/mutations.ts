@@ -15,10 +15,17 @@ const mutations = {
 
   sortByAlphabet(state: State): void {
     state.voices.sort((a, b) => (a.name > b.name ? 1 : -1));
+    state.filteredVoices.sort((a, b) => (a.name > b.name ? 1 : -1));
   },
 
   sortByAlphabetReverse(state: State): void {
     state.voices.sort((a, b) => (a.name > b.name ? 1 : -1)).reverse();
+    state.filteredVoices.sort((a, b) => (a.name > b.name ? 1 : -1)).reverse();
+  },
+
+  filterByCategory(state:State, category: string): void {
+    state.filteredVoices = state.voices
+      .filter((voice) => voice.tags.some((tag) => tag === category));
   },
 
 };

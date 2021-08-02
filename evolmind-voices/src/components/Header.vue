@@ -24,6 +24,43 @@
         class="fas fa-sort-alpha-down-alt"
         @click="sortByAlphabetReverse"
         />
+
+        <Dropdown menu-title="All songs">
+
+          <section class="option">
+            <button @click="filterByCategory('misc')">Miscelaneous</button>
+          </section>
+
+          <section class="option">
+            <button @click="filterByCategory('devices')">Devices</button>
+          </section>
+
+          <section class="option">
+            <button @click="filterByCategory('human')">Human</button>
+          </section>
+
+          <section class="option">
+            <button @click="filterByCategory('robotic')">Robotic</button>
+          </section>
+
+          <section class="option">
+            <button @click="filterByCategory('sing')">Sing</button>
+          </section>
+
+          <section class="option">
+            <button @click="filterByCategory('environment')">Environment</button>
+          </section>
+
+          <section class="option">
+            <button @click="filterByCategory('character')">Character</button>
+          </section>
+
+          <section class="option">
+            <button @click="filterByCategory('horror')">Horror</button>
+          </section>
+
+        </Dropdown>
+
           <router-link to="/favorites" @click="scrollToTop">
             <em class="far fa-heart" />
         </router-link>
@@ -37,14 +74,20 @@
 import { defineComponent } from 'vue';
 import { mapGetters, mapMutations, mapState } from 'vuex';
 import { Voice } from '@/types/interfaces';
+import Dropdown from '@/components/Dropdown.vue';
 
 interface Data {
-    searchInput: string,
-    filteredProducts: Array<Voice>
+  searchInput: string,
+  filteredProducts: Array<Voice>
 }
 
 export default defineComponent({
   name: 'Header',
+
+  components: {
+    Dropdown,
+  },
+
   computed: {
     ...mapGetters([
     ]),
@@ -57,6 +100,7 @@ export default defineComponent({
     ...mapMutations([
       'sortByAlphabet',
       'sortByAlphabetReverse',
+      'filterByCategory',
     ]),
 
     scrollToTop() {

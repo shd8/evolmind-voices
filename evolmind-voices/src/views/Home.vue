@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <VoicesList :list="voices"/>
+    <VoicesList v-if="filteredVoices.length" :list="filteredVoices" />
+    <VoicesList v-else :list="voices" />
   </div>
 </template>
 
@@ -15,6 +16,7 @@ export default defineComponent({
   computed: {
     ...mapState([
       'voices',
+      'filteredVoices',
     ]),
   },
 
