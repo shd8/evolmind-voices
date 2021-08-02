@@ -19,7 +19,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'VoicesList',
+  name: 'Dropdown',
   props: ['menuTitle'],
 
   methods: {

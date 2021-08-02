@@ -1,9 +1,7 @@
 <template>
   <div class="favorites">
-    <VoicesList
-    v-if="favorites.length"
-    :list="favorites"
-    />
+    <VoicesList v-if="filteredFavorites.length" :list="filteredFavorites" />
+    <VoicesList v-else-if="favorites.length" :list="favorites" />
     <section v-else>
       <p>You have no favorites songs yet</p>
     </section>
@@ -13,7 +11,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { mapState, mapActions } from 'vuex';
+import { mapState } from 'vuex';
 import VoicesList from '@/components/VoicesList.vue';
 
 export default defineComponent({
@@ -26,12 +24,7 @@ export default defineComponent({
   computed: {
     ...mapState([
       'favorites',
-    ]),
-  },
-
-  methods: {
-    ...mapActions([
-      'fetchVoices',
+      'filteredFavorites',
     ]),
   },
 });
