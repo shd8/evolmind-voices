@@ -1,0 +1,10 @@
+@import '../styles/colors';
+
+.hrItem {
+    width: 95%;
+    background-color: $details;
+    border: none;
+    height: 1px;
+    margin-bottom: 1em;
+    flex: none;
+}

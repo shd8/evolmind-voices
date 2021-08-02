@@ -1,29 +1,27 @@
 <template>
     <div class="header">
-        <nav
-        class="nav">
+        <nav class="nav">
             <div class="nav__buttons">
-                <section class="links">
-                    <router-link to="/favorites" @click="scrollToTop">
-                        <em class="far fa-heart" />
-                    </router-link>
                     <router-link to="/" @click="scrollToTop">
                         <em class="fas fa-home" />
                     </router-link>
-                </section>
-                <div class='search'>
-                    <em class="fas fa-search"></em>
-                    <input
-                    class="search__input"
-                    type="text"
-                    placeholder="Search something ..."
-                    v-model="searchInput"
-                    v-on:input="filterWithSearchInput"
-                    />
-                    <em class="far fa-play-circle" />
-                </div>
+                    <div class='search'>
+                        <em class="fas fa-search"></em>
+                        <input
+                        class="search__input"
+                        type="text"
+                        placeholder="Search something ..."
+                        v-model="searchInput"
+                        v-on:input="filterWithSearchInput"
+                        />
+                        <em class="far fa-play-circle" />
+                    </div>
+                     <router-link to="/favorites" @click="scrollToTop">
+                        <em class="far fa-heart" />
+                    </router-link>
             </div>
         </nav>
+        <hr class="hrItem">
     </div>
 </template>
 
@@ -36,6 +34,7 @@ interface Data {
     searchInput: string,
     filteredProducts: Array<Voice>
 }
+
 export default defineComponent({
   name: 'Header',
   computed: {
@@ -75,13 +74,21 @@ export default defineComponent({
 
 <style scoped lang="scss">
 // @import "../styles/_mixins.scss";
-// @import '../styles/_colors.scss';
+@import '../styles/_colors.scss';
+@import '../assets/_global-styles.scss';
+
+.nav {
+    padding: 1em 1em 0.5em 1em;
+
+    &__buttons {
+        display: flex;
+    }
+}
 
 .header {
+    background-color: $base;
     position: fixed;
     width: 100%;
-    display: flex;
-    flex-direction: column;
     z-index: 99;
 }
 

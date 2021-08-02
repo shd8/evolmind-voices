@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>This is a favorites page</h1>
     <button @click="fetchVoices">Load voices</button>
     <p>{{voices}}</p>
   </div>
