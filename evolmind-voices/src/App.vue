@@ -88,6 +88,9 @@ table {
 
 .container {
   padding-top: 5em;
+}
+
+html {
   background-color: $base;
 }
 </style>
