@@ -4,8 +4,6 @@ import VOICES from '@/assets/voices.json';
 
 const actions = {
   async fetchVoices({ commit }:ActionContext<State, State>): Promise<void> {
-    console.log(VOICES);
-
     commit('updateVoices', VOICES);
   },
 };

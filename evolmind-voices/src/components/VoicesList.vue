@@ -1,14 +1,14 @@
 <template>
-  <ul
-    v-for='voice in list'
-    :key="voice.id">
-      <li>
-        <VoiceIcon
-        :id="voice.id"
-        :name="voice.name"
-        :icon="voice.icon"
-        :tags="voice.tags"
-        />
+  <ul>
+    <li
+      v-for='voice in list'
+      :key="voice.id">
+      <VoiceIcon
+      :id="voice.id"
+      :name="voice.name"
+      :icon="voice.icon"
+      :tags="voice.tags"
+      />
       </li>
     </ul>
 </template>
@@ -28,6 +28,15 @@ export default defineComponent({
 
 </script>
 
-<style>
+<style scoped lang="scss">
+// @import "../styles/_mixins.scss";
+@import '../styles/_colors.scss';
+@import '../assets/_global-styles.scss';
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 </style>

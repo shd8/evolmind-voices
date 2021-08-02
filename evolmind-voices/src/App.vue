@@ -39,6 +39,15 @@ export default defineComponent({
 @import './styles/_colors.scss';
 @import './assets/_global-styles.scss';
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -99,6 +108,5 @@ html {
   p {
     color: $details;
   }
-
 }
 </style>
