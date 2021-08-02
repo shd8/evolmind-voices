@@ -5,6 +5,11 @@ interface Voice {
     tags: Array<string>
 }
 
+interface Category {
+    category: string,
+    tag: string
+}
+
 interface State {
     voices: Array<Voice>,
     favorites: Array<Voice>,
@@ -12,4 +17,4 @@ interface State {
     filteredFavorites: Array<Voice>
 }
 
-export { Voice, State };
+export { Voice, State, Category };
