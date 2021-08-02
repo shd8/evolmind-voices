@@ -45,8 +45,14 @@ img {
   border-radius: 50%;
 
   &:hover {
-    transition: ease-in 200ms;
-    background-color: $details;
+    transition: ease-in-out 100ms;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 0 0 5px red,
+                0 0 20px rgba(255, 38, 0, 0.8),
+                0 0 35px rgba(255, 38, 0, 0.7),
+                0 0 50px rgba(255, 38, 0, 0.6);
+    border-color: #fff;
   }
 }
 

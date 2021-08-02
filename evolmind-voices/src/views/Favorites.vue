@@ -1,7 +1,13 @@
 <template>
   <div class="favorites">
-    <h1>This is a favorites page</h1>
-    <VoicesList :list="favorites" />
+    <VoicesList
+    v-if="favorites.length"
+    :list="favorites"
+    />
+    <section v-else>
+      <p>You have no favorites songs yet</p>
+    </section>
+
   </div>
 </template>
 

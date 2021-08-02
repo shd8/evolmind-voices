@@ -1,28 +1,28 @@
 <template>
-    <div class="header">
-        <nav class="nav">
-            <div class="nav__buttons">
-                    <router-link to="/" @click="scrollToTop">
-                        <em class="fas fa-home" />
-                    </router-link>
-                    <div class='search'>
-                        <em class="fas fa-search"></em>
-                        <input
-                        class="search__input"
-                        type="text"
-                        placeholder="Search something ..."
-                        v-model="searchInput"
-                        v-on:input="filterWithSearchInput"
-                        />
-                        <em class="far fa-play-circle" />
-                    </div>
-                     <router-link to="/favorites" @click="scrollToTop">
-                        <em class="far fa-heart" />
-                    </router-link>
-            </div>
-        </nav>
-        <hr class="hrItem">
-    </div>
+  <div class="header">
+    <nav class="nav">
+      <div class="nav__buttons">
+        <router-link to="/" @click="scrollToTop">
+          <em class="fas fa-home" />
+        </router-link>
+        <div class='search'>
+          <em class="fas fa-search"></em>
+          <input
+          class="search__input"
+          type="text"
+          placeholder="Search something ..."
+          v-model="searchInput"
+          v-on:input="filterWithSearchInput"
+          />
+          <em class="far fa-play-circle" />
+        </div>
+          <router-link to="/favorites" @click="scrollToTop">
+            <em class="far fa-heart" />
+        </router-link>
+      </div>
+    </nav>
+      <hr class="hrItem">
+  </div>
 </template>
 
 <script lang="ts">
@@ -76,6 +76,11 @@ export default defineComponent({
 // @import "../styles/_mixins.scss";
 @import '../styles/_colors.scss';
 @import '../assets/_global-styles.scss';
+
+.fa-home {
+  font-size: 2em;
+  padding: 0.25em;
+}
 
 .nav {
   padding: 1em 1em 0.5em 1em;
