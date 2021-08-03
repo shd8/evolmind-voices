@@ -10,6 +10,7 @@
 }
 
 @mixin fixedRound($top, $left, $transition) {
+    background-color: $details;
     cursor: pointer;
     position: fixed;
     display: flex;
