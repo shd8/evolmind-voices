@@ -4,40 +4,30 @@
     type="text"
     placeholder="Search something ..."
     v-model="searchInput"
-    v-on:input="filterBySearch(searchInput)"
+    v-on:input="updateFilterString(searchInput)"
     />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { mapMutations, mapState } from 'vuex';
-import { Voice } from '@/types/interfaces';
+import { mapMutations } from 'vuex';
 
 interface Data {
   searchInput: string,
-  filteredProducts: Array<Voice>
 }
 
 export default defineComponent({
   name: 'Search',
 
-  computed: {
-    ...mapState([
-      'rightMode',
-    ]),
-
-  },
-
   methods: {
     ...mapMutations([
-      'filterBySearch',
+      'updateFilterString',
     ]),
   },
 
   data(): Data {
     return {
       searchInput: '',
-      filteredProducts: [],
     };
   },
 

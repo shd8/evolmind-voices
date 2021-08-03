@@ -7,14 +7,14 @@ interface Voice {
 
 interface Category {
     category: string,
-    tag: string
+    tag: string,
 }
 
 interface State {
     voices: Array<Voice>,
     favorites: Array<Voice>,
-    filteredVoices: Array<Voice>,
-    filteredFavorites: Array<Voice>
+    currentCategory: string,
+    inputString: string,
 }
 
 export { Voice, State, Category };

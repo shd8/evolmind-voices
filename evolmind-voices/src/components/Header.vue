@@ -44,8 +44,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { mapGetters, mapMutations, mapState } from 'vuex';
-import { Voice, Category } from '@/types/interfaces';
+import { mapMutations, mapState } from 'vuex';
+import { Category } from '@/types/interfaces';
 import Dropdown from '@/components/Dropdown.vue';
 import Search from '@/components/Search.vue';
 import CATEGORIES from '@/assets/categories';
@@ -54,7 +54,6 @@ interface Data {
   CATEGORIES: Array<Category>,
   dropdownSelection: string,
   searchInput: string,
-  filteredProducts: Array<Voice>
 }
 
 export default defineComponent({
@@ -66,8 +65,6 @@ export default defineComponent({
   },
 
   computed: {
-    ...mapGetters([
-    ]),
     ...mapState([
       'voices',
       'favorites',
@@ -77,7 +74,7 @@ export default defineComponent({
     ...mapMutations([
       'sortByAlphabet',
       'sortByAlphabetReverse',
-      'filterByCategory',
+      'updateCategoryTag',
     ]),
 
     scrollToTop() {
@@ -85,7 +82,7 @@ export default defineComponent({
     },
 
     handleDropdown(category: Category) {
-      this.filterByCategory(category.tag);
+      this.updateCategoryTag(category.tag);
       this.dropdownSelection = category.category;
     },
 
@@ -95,7 +92,6 @@ export default defineComponent({
       CATEGORIES,
       dropdownSelection: 'All songs',
       searchInput: '',
-      filteredProducts: [],
     };
   },
 });

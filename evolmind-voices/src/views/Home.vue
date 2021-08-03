@@ -8,7 +8,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import VoicesList from '@/components/VoicesList.vue';
-import { mapState } from 'vuex';
+import { mapGetters, mapState } from 'vuex';
 
 export default defineComponent({
   name: 'Home',
@@ -16,6 +16,10 @@ export default defineComponent({
   computed: {
     ...mapState([
       'voices',
+    ]),
+
+    ...mapGetters([
+      'filteredByStringVoices',
       'filteredVoices',
     ]),
   },

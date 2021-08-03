@@ -15,32 +15,20 @@ const mutations = {
 
   sortByAlphabet(state: State): void {
     state.voices.sort((a, b) => (a.name > b.name ? 1 : -1));
-    state.filteredVoices.sort((a, b) => (a.name > b.name ? 1 : -1));
     state.favorites.sort((a, b) => (a.name > b.name ? 1 : -1));
-    state.filteredFavorites.sort((a, b) => (a.name > b.name ? 1 : -1));
   },
 
   sortByAlphabetReverse(state: State): void {
     state.voices.sort((a, b) => (a.name > b.name ? 1 : -1)).reverse();
-    state.filteredVoices.sort((a, b) => (a.name > b.name ? 1 : -1)).reverse();
     state.favorites.sort((a, b) => (a.name > b.name ? 1 : -1)).reverse();
-    state.filteredFavorites.sort((a, b) => (a.name > b.name ? 1 : -1)).reverse();
   },
 
-  filterByCategory(state:State, category: string): void {
-    state.filteredVoices = state.voices
-      .filter((voice) => voice.tags.some((tag) => tag === category));
-
-    state.filteredFavorites = state.favorites
-      .filter((voice) => voice.tags.some((tag) => tag === category));
-
-    console.log(state.filteredFavorites);
+  updateFilterString(state: State, payload: string): void {
+    state.inputString = payload;
   },
 
-  filterBySearch(state:State, searchString: string): void {
-    state.filteredVoices = state.voices
-      .filter((voice:Voice) => voice.name.toLowerCase()
-        .includes(searchString.toLowerCase()));
+  updateCategoryTag(state: State, payload: string): void {
+    state.currentCategory = payload;
   },
 
 };

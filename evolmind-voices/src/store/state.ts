@@ -1,8 +1,8 @@
 const state = {
   voices: [],
   favorites: [],
-  filteredVoices: [],
-  filteredFavorites: [],
+  currentCategory: '',
+  inputString: '',
 };
 
 export default state;
