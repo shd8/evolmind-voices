@@ -7,14 +7,9 @@
         </router-link>
         <div class='search'>
           <em class="fas fa-search"></em>
-          <input
-          class="search__input"
-          type="text"
-          placeholder="Search something ..."
-          v-model="searchInput"
-          v-on:input="filterWithSearchInput"
-          />
-          <em class="far fa-play-circle" />
+
+          <Search />
+
         </div>
         <em
         class="fas fa-sort-alpha-up"
@@ -52,6 +47,7 @@ import { defineComponent } from 'vue';
 import { mapGetters, mapMutations, mapState } from 'vuex';
 import { Voice, Category } from '@/types/interfaces';
 import Dropdown from '@/components/Dropdown.vue';
+import Search from '@/components/Search.vue';
 import CATEGORIES from '@/assets/categories';
 
 interface Data {
@@ -66,6 +62,7 @@ export default defineComponent({
 
   components: {
     Dropdown,
+    Search,
   },
 
   computed: {
@@ -83,27 +80,15 @@ export default defineComponent({
       'filterByCategory',
     ]),
 
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
+
     handleDropdown(category: Category) {
       this.filterByCategory(category.tag);
       this.dropdownSelection = category.category;
     },
 
-    scrollToTop() {
-      window.scrollTo(0, 0);
-    },
-    emptyInput() {
-      this.searchInput = '';
-      this.filteredProducts = [];
-    },
-    filterWithSearchInput() {
-      if (this.searchInput !== '') {
-        this.filteredProducts = this.voices
-          .filter((product:Voice) => product.name.toLowerCase()
-            .includes(this.searchInput.toLowerCase()));
-      } else {
-        this.filteredProducts = [];
-      }
-    },
   },
   data(): Data {
     return {
