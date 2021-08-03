@@ -1,7 +1,22 @@
 <template>
   <div class="header">
-    <nav class="nav">
-      <div class="nav__buttons">
+    <button
+    type="button"
+    @click="handleShowNavigation"
+    class="header__navigation"
+    :class="{'header__navigation--activated': !showNavigation}"
+    ></button>
+
+    <div class="blue" :class="{'hidden hidden--blue': showNavigation}">A</div>
+    <div class="red" :class="{'hidden--red': showNavigation}">B</div>
+    <div class="orange" :class="{'hidden--orange': showNavigation}">C</div>
+    <div class="black" :class="{'hidden--black': showNavigation}">D</div>
+    <div class="white" :class="{'hidden--white': showNavigation}">E</div>
+
+    <!-- <nav class="nav">
+      <div
+      class="nav__buttons"
+      >
         <router-link to="/" @click="scrollToTop">
           <em class="fas fa-home" />
         </router-link>
@@ -37,8 +52,7 @@
             <em class="far fa-heart" />
         </router-link>
       </div>
-    </nav>
-      <hr class="hrItem">
+    </nav> -->
   </div>
 </template>
 
@@ -54,14 +68,15 @@ interface Data {
   CATEGORIES: Array<Category>,
   dropdownSelection: string,
   searchInput: string,
+  showNavigation: boolean,
 }
 
 export default defineComponent({
   name: 'Header',
 
   components: {
-    Dropdown,
-    Search,
+    // Dropdown,
+    // Search,
   },
 
   computed: {
@@ -77,6 +92,10 @@ export default defineComponent({
       'updateCategoryTag',
     ]),
 
+    handleShowNavigation() {
+      this.showNavigation = !this.showNavigation;
+    },
+
     scrollToTop() {
       window.scrollTo(0, 0);
     },
@@ -87,11 +106,13 @@ export default defineComponent({
     },
 
   },
+
   data(): Data {
     return {
       CATEGORIES,
       dropdownSelection: 'All songs',
       searchInput: '',
+      showNavigation: true,
     };
   },
 });
@@ -127,11 +148,28 @@ export default defineComponent({
   }
 }
 
+.header__navigation {
+  position: absolute;
+  left: 0;
+  border-style: hidden;
+  height: 10em;
+  width: 10em;
+  border-radius: 0em 0em 9em 0em;
+  background-color: $details;
+  transition: 300ms ;
+
+  &--activated {
+    height: 12em;
+    width: 12em;
+    transition: 300ms ;
+  }
+}
+
 .header {
   background-color: $base;
   position: fixed;
   width: 100%;
-  z-index: 99;
+  z-index: 1;
 }
 
 em {
@@ -146,6 +184,72 @@ em {
   &:hover {
     color: $details;
   }
+}
+
+.hidden {
+  visibility: hidden;
+
+  &--blue {
+    transform: translate(-11em, 0em);
+  }
+
+  &--red {
+    transform: translate(-11em, -3em);
+  }
+
+  &--orange {
+    transform: translate(-11em, -6em);
+  }
+
+  &--black {
+    transform: translate(-11em, -11em);
+  }
+
+  &--white {
+    transform: translate(-11em, -13em);
+  }
+
+}
+
+.blue,
+.red,
+.orange,
+.black,
+.white {
+  &:hover {
+    transition: ease-in-out 100ms;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 0 0 5px red,
+                0 0 20px rgba(255, 38, 0, 1),
+                0 0 35px rgba(255, 38, 0, 1),
+                0 0 50px rgba(255, 38, 0, 1);
+    border-color: #fff;
+  }
+
+}
+
+.blue {
+  background-color: blue;
+  @include fixedRound(1em, 11.5em, 150ms);
+}
+
+.red {
+  background-color: red;
+  @include fixedRound(4em, 11.5em, 250ms);
+
+}
+.orange {
+  background-color: orange;
+  @include fixedRound(7.5em, 10em, 350ms);
+}
+.black {
+  background-color: green;
+  @include fixedRound(10em, 6.5em, 450ms);
+}
+.white {
+  background-color: white;
+  @include fixedRound(11em, 2em, 550ms);
 }
 
 </style>

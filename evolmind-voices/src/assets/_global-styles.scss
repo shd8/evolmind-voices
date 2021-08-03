@@ -8,3 +8,19 @@
     margin-bottom: 1em;
     flex: none;
 }
+
+@mixin fixedRound($top, $left, $transition) {
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 2em;
+    width: 2em;
+    left: $left;
+    top: $top;
+    transition: $transition ease-in-out;
+    z-index: -1;
+}
+
