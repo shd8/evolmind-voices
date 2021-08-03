@@ -38,12 +38,9 @@ const mutations = {
   },
 
   filterBySearch(state:State, searchString: string): void {
-    console.log('hola');
-    if (searchString !== '') {
-      state.filteredVoices = state.voices
-        .filter((voice:Voice) => voice.name.toLowerCase()
-          .includes(searchString.toLowerCase()));
-    }
+    state.filteredVoices = state.voices
+      .filter((voice:Voice) => voice.name.toLowerCase()
+        .includes(searchString.toLowerCase()));
   },
 
 };
