@@ -68,7 +68,7 @@ export default defineComponent({
 
     .bar1 {
       margin-top: 0.1em;
-      width: 70%;
+      width: 60%;
       max-width: 28px;
       height: 3px;
       background: $grey;
@@ -87,7 +87,7 @@ export default defineComponent({
     }
 
     .bar2 {
-      width: 70%;
+      width: 60%;
       max-width: 28px;
       height: 3px;
       background: $grey;
@@ -105,12 +105,13 @@ export default defineComponent({
     }
 
     .bar3 {
-      width: 70%;
+      width: 60%;
       max-width: 28px;
       height: 3px;
       background: $grey;
       position: absolute;
       left: 50%;
+      top: 45%;
       transform: translate(-50%, calc(-50% + 8px) );
       transition: all 0.2s ease;
     }
