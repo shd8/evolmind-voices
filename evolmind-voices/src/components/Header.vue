@@ -171,7 +171,7 @@ export default defineComponent({
 }
 
 em {
-  color: $gray;
+  color: $grey;
 }
 
 .fa-home,

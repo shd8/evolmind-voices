@@ -39,6 +39,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/_colors.scss';
 
 .dropDownMenuWrapper {
 
@@ -64,10 +65,10 @@ export default defineComponent({
     z-index: 1;
 
     .bar1 {
-      width: 100%;
+      width: 85%;
       max-width: 28px;
       height: 3px;
-      background: blue;
+      background: $grey;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -83,14 +84,14 @@ export default defineComponent({
     .bar1--open {
       transform: translate(-50%, -50%) rotate(45deg);
       margin-top: 0;
-      background: red;
+      background: $grey;
     }
 
     .bar2 {
-      width: 100%;
+      width: 85%;
       max-width: 28px;
       height: 3px;
-      background: blue;
+      background: $grey;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -109,14 +110,13 @@ export default defineComponent({
     }
 
     .bar3 {
-      width: 100%;
+      width: 85%;
       max-width: 28px;
       height: 3px;
-      background: blue;
+      background: $grey;
       position: absolute;
       top: 50%;
       left: 50%;
-      border-radius: 9999px;
       transform: translate(-50%, calc(-50% + 8px) );
       transition: all 0.2s ease;
     }
@@ -128,7 +128,7 @@ export default defineComponent({
     .bar3--open {
       top: 50%;
       transform: translate(-50%, -50% ) rotate(-45deg);
-      background: red;
+      background: $grey;
     }
 
   }

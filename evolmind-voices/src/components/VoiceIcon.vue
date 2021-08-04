@@ -56,4 +56,10 @@ img {
   }
 }
 
+@media (max-width: 500px) {
+  div {
+    padding: 0em 2em;
+  }
+}
+
 </style>
