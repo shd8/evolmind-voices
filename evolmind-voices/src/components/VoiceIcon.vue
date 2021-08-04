@@ -2,7 +2,7 @@
   <div>
     <img
     :src="require(`../assets/${voice.icon}`)"
-    :alt="icon"
+    :alt="voice.icon"
     @click="updateFavorites(voice)"
     >
     <span>{{voice.name}}</span>
