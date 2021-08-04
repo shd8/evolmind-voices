@@ -30,7 +30,6 @@ const mutations = {
   updateCategoryTag(state: State, payload: string): void {
     state.currentCategory = payload;
   },
-
 };
 
 export default mutations;

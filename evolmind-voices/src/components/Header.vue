@@ -8,7 +8,10 @@
     ></button>
 
     <div class="blue" :class="{'hidden hidden--blue': showNavigation}">
-      <Dropdown>
+      <Dropdown
+      @click="setOpenedDropdown('search')"
+      :isOpen="openedDropdown === 'search'"
+      >
         <div class='search'>
           <em class="fas fa-search"></em>
           <Search />
@@ -17,14 +20,20 @@
     </div>
 
     <div class="red" :class="{'hidden--red': showNavigation}">
-      <Dropdown>
+      <Dropdown
+      @click="setOpenedDropdown('sort')"
+      :isOpen="openedDropdown === 'sort'"
+      >
         <em class="fas fa-sort-alpha-up" @click="sortByAlphabet" />
         <em class="fas fa-sort-alpha-down-alt" @click="sortByAlphabetReverse" />
       </Dropdown>
     </div>
 
     <div class="orange" :class="{'hidden--orange': showNavigation}">
-      <Dropdown>
+      <Dropdown
+      @click="setOpenedDropdown('category')"
+      :isOpen="openedDropdown === 'category'"
+      >
         <section
         v-for="category in CATEGORIES"
         :key="category.category"
@@ -64,6 +73,7 @@ interface Data {
   dropdownSelection: string,
   searchInput: string,
   showNavigation: boolean,
+  openedDropdown: string,
 }
 
 export default defineComponent({
@@ -80,6 +90,7 @@ export default defineComponent({
       'favorites',
     ]),
   },
+
   methods: {
     ...mapMutations([
       'sortByAlphabet',
@@ -87,7 +98,15 @@ export default defineComponent({
       'updateCategoryTag',
     ]),
 
+    setOpenedDropdown(dropdown: string) {
+      // eslint-disable-next-line no-unused-expressions
+      this.openedDropdown === dropdown
+        ? this.openedDropdown = ''
+        : this.openedDropdown = dropdown;
+    },
+
     handleShowNavigation() {
+      this.openedDropdown = '';
       this.showNavigation = !this.showNavigation;
     },
 
@@ -99,7 +118,6 @@ export default defineComponent({
       this.updateCategoryTag(category.tag);
       this.dropdownSelection = category.category;
     },
-
   },
 
   data(): Data {
@@ -108,6 +126,7 @@ export default defineComponent({
       dropdownSelection: 'All songs',
       searchInput: '',
       showNavigation: true,
+      openedDropdown: '',
     };
   },
 });

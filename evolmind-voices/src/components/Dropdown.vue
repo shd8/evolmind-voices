@@ -1,14 +1,17 @@
 <template>
     <section class="dropDownMenuWrapper">
 
-        <div class="iconWrapper" @click="openClose">
+        <div
+        class="iconWrapper"
+        @click="openClose"
+        >
             <button class="dropDownMenuButton" ref="menu" ></button>
             <div class="bar1" :class="{ 'bar1--open' : isOpen }" />
             <div class="bar2" :class="{ 'bar2--open' : isOpen }" />
             <div class="bar3" :class="{ 'bar3--open' : isOpen }" />
         </div>
 
-        <section class="dropdownMenu" v-if="isOpen" >
+        <section class="dropdownMenu" v-if="isOpen">
             <div class="menuArrow" />
             <slot/>
         </section>
@@ -20,18 +23,7 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Dropdown',
-
-  methods: {
-    openClose() {
-      this.isOpen = !this.isOpen;
-    },
-  },
-
-  data() {
-    return {
-      isOpen: false,
-    };
-  },
+  props: ['isOpen'],
 
 });
 
