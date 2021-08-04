@@ -13,7 +13,7 @@
       :dropdownSetter="() => setOpenedDropdown('search')"
       :isOpen="openedDropdown === 'search'"
       >
-          <Search />
+        <Search />
       </Dropdown>
     </div>
 
@@ -33,24 +33,33 @@
       :dropdownSetter="() => setOpenedDropdown('category')"
       :isOpen="openedDropdown === 'category'"
       >
-        <section
+        <button
         v-for="category in CATEGORIES"
         :key="category.category"
         class="option"
+        type="button"
         @click="handleDropdown(category)"
         >
-          <button>{{category.category}}</button>
-        </section>
+          <span>{{category.category}}</span>
+        </button>
       </Dropdown>
     </div>
 
-    <div class="black" :class="{'hidden--black': showNavigation}">
+    <div
+    class="black"
+    :class="{'hidden--black': showNavigation}"
+    @click="setOpenedDropdown('')"
+    >
         <router-link to="/" @click="scrollToTop">
         <em class="fas fa-home" />
       </router-link>
     </div>
 
-    <div class="white" :class="{'hidden--white': showNavigation}">
+    <div
+    class="white"
+    :class="{'hidden--white': showNavigation}"
+    @click="setOpenedDropdown('')"
+    >
       <router-link to="/favorites" @click="scrollToTop">
             <em class="far fa-heart" />
         </router-link>
@@ -143,12 +152,16 @@ export default defineComponent({
 
 .fa-home,
 .fa-heart,
-.fa-play-circle,
-.fa-sort-alpha-up,
-.fa-sort-alpha-down-alt {
+.fa-play-circle {
   cursor: pointer;
   font-size: 1em;
   padding: 0.25em;
+}
+
+.fa-sort-alpha-up,
+.fa-sort-alpha-down-alt {
+  font-size: 1.5em;
+  padding: 0.25em 0em;
 }
 
 .nav {
@@ -203,7 +216,7 @@ em {
 .fa-sort-alpha-up,
 .fa-sort-alpha-down-alt {
   &:hover {
-    color: $details;
+    color: $focus;
   }
 }
 
@@ -268,6 +281,31 @@ em {
 
 .white {
   @include fixedRound(11em, 2em, 550ms);
+}
+
+.option {
+
+  padding: 0.5em;
+
+  span {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    padding-bottom: 0.3em;
+    background-image: linear-gradient(
+      transparent calc(100% - 5px),
+      $focus
+    );
+    background-size: 0;
+    background-repeat: no-repeat;
+    display: inline;
+    transition: 0.5s ease;
+  }
+
+  &:hover {
+    span {
+      background-size: 100%;
+    }
+  }
+
 }
 
 </style>

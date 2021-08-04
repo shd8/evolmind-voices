@@ -91,6 +91,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+button {
+  border: none;
+  background: none;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
