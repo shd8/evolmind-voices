@@ -9,18 +9,17 @@
 
     <div class="blue" :class="{'hidden hidden--blue': showNavigation}">
       <Dropdown
+      iconClass="fas fa-search"
       :dropdownSetter="() => setOpenedDropdown('search')"
       :isOpen="openedDropdown === 'search'"
       >
-        <div class='search'>
-          <em class="fas fa-search"></em>
           <Search />
-        </div>
       </Dropdown>
     </div>
 
     <div class="red" :class="{'hidden--red': showNavigation}">
       <Dropdown
+      iconClass="fas fa-sort-amount-up-alt"
       :dropdownSetter="() => setOpenedDropdown('sort')"
       :isOpen="openedDropdown === 'sort'"
       >

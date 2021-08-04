@@ -2,13 +2,21 @@
     <section class="dropDownMenuWrapper">
 
         <div
+        v-if="iconClass"
         class="iconWrapper"
         @click="dropdownSetter"
         >
-            <button class="dropDownMenuButton" ref="menu" ></button>
-            <div class="bar1" :class="{ 'bar1--open' : isOpen }" />
-            <div class="bar2" :class="{ 'bar2--open' : isOpen }" />
-            <div class="bar3" :class="{ 'bar3--open' : isOpen }" />
+          <em :class="iconClass"/>
+        </div>
+
+        <div
+        v-else
+        class="iconWrapper"
+        @click="dropdownSetter"
+        >
+          <div class="bar1" :class="{ 'bar1--open' : isOpen }" />
+          <div class="bar2" :class="{ 'bar2--open' : isOpen }" />
+          <div class="bar3" :class="{ 'bar3--open' : isOpen }" />
         </div>
 
         <section class="dropdownMenu" v-if="isOpen">
@@ -23,7 +31,7 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Dropdown',
-  props: ['isOpen', 'dropdownSetter'],
+  props: ['isOpen', 'dropdownSetter', 'iconClass'],
 
 });
 
@@ -48,15 +56,19 @@ export default defineComponent({
   }
 
   .iconWrapper {
-    width: 25px;
-    height: 25px;
+    width: 2em;
+    height: 2em;
     position: absolute;
     top: 50%;
     transform: translate(0,-50%);
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .bar1 {
-      width: 85%;
+      margin-top: 0.1em;
+      width: 70%;
       max-width: 28px;
       height: 3px;
       background: $grey;
@@ -68,10 +80,6 @@ export default defineComponent({
       transition: all 0.2s ease;
     }
 
-    .bar1--dark {
-      background: #eee;
-    }
-
     .bar1--open {
       transform: translate(-50%, -50%) rotate(45deg);
       margin-top: 0;
@@ -79,7 +87,7 @@ export default defineComponent({
     }
 
     .bar2 {
-      width: 85%;
+      width: 70%;
       max-width: 28px;
       height: 3px;
       background: $grey;
@@ -92,28 +100,19 @@ export default defineComponent({
       transition: all 0.2s ease;
     }
 
-    .bar2--dark {
-      background: #eee;
-    }
-
     .bar2--open {
       opacity: 0;
     }
 
     .bar3 {
-      width: 85%;
+      width: 70%;
       max-width: 28px;
       height: 3px;
       background: $grey;
       position: absolute;
-      top: 50%;
       left: 50%;
       transform: translate(-50%, calc(-50% + 8px) );
       transition: all 0.2s ease;
-    }
-
-    .bar3--dark {
-      background: #eee;
     }
 
     .bar3--open {
@@ -156,11 +155,6 @@ export default defineComponent({
       border-radius: 4px 0 0 0;
     }
 
-    .menuArrow--dark {
-      background: #333;
-      border: none;
-    }
-
     .option {
       width: 100%;
       border-bottom: 1px solid #eee;
@@ -196,20 +190,6 @@ export default defineComponent({
 
   }
 
-  .dropdownMenu--dark {
-    background: #333;
-    border: none;
-
-    .option {
-      border-bottom: 1px solid #888;
-    }
-
-    * {
-      color: #eee;
-    }
-
-  }
-
   @keyframes menu {
     from { transform: translate3d( 0, 30px ,0 ) }
     to { transform: translate3d( 0, 20px ,0 ) }
@@ -223,8 +203,4 @@ export default defineComponent({
   height: 60px;
 }
 
-.dropDownMenuWrapper--dark {
-  background: #333;
-  border: none;
-}
 </style>
