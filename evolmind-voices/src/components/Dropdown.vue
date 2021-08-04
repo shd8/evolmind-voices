@@ -3,7 +3,7 @@
 
         <div
         class="iconWrapper"
-        @click="openClose"
+        @click="dropdownSetter"
         >
             <button class="dropDownMenuButton" ref="menu" ></button>
             <div class="bar1" :class="{ 'bar1--open' : isOpen }" />
@@ -23,7 +23,7 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Dropdown',
-  props: ['isOpen'],
+  props: ['isOpen', 'dropdownSetter'],
 
 });
 

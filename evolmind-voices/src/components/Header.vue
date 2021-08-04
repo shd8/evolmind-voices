@@ -9,7 +9,7 @@
 
     <div class="blue" :class="{'hidden hidden--blue': showNavigation}">
       <Dropdown
-      @click="setOpenedDropdown('search')"
+      :dropdownSetter="() => setOpenedDropdown('search')"
       :isOpen="openedDropdown === 'search'"
       >
         <div class='search'>
@@ -21,7 +21,7 @@
 
     <div class="red" :class="{'hidden--red': showNavigation}">
       <Dropdown
-      @click="setOpenedDropdown('sort')"
+      :dropdownSetter="() => setOpenedDropdown('sort')"
       :isOpen="openedDropdown === 'sort'"
       >
         <em class="fas fa-sort-alpha-up" @click="sortByAlphabet" />
@@ -31,7 +31,7 @@
 
     <div class="orange" :class="{'hidden--orange': showNavigation}">
       <Dropdown
-      @click="setOpenedDropdown('category')"
+      :dropdownSetter="() => setOpenedDropdown('category')"
       :isOpen="openedDropdown === 'category'"
       >
         <section
