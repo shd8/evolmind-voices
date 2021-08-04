@@ -1,8 +1,8 @@
 <template>
-    <section class="dropDownMenuWrapper">
-        <button class="dropDownMenuButton" ref="menu" @click="openClose">{{menuTitle}}</button>
+    <section class="dropDownMenuWrapper" @click="openClose">
 
         <div class="iconWrapper">
+            <button class="dropDownMenuButton" ref="menu" ></button>
             <div class="bar1" :class="{ 'bar1--open' : isOpen }" />
             <div class="bar2" :class="{ 'bar2--open' : isOpen }" />
             <div class="bar3" :class="{ 'bar3--open' : isOpen }" />
@@ -39,50 +39,26 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.dropDownMenuWrapper {
-  position: relative;
-  width: 500px;
-  height: 80px;
-  border-radius: 8px;
-  background: white;
-  border: 1px solid #eee;
-  box-shadow: 10px 10px 0 0 rgba(black,.03);
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-  * {
-    box-sizing: border-box;
-    text-align: left;
-  }
+.dropDownMenuWrapper {
+
+  display: flex;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
 
   .dropDownMenuButton {
     border: none;
     font-size: inherit;
     background: none;
     outline: none;
-    border-radius: 4px;
     position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    padding: 0 70px 0 20px;
-    margin: 0;
-    line-height: 1;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    cursor: pointer;
-  }
-
-  .dropDownMenuButton--dark {
-    color: #eee;
   }
 
   .iconWrapper {
     width: 25px;
     height: 25px;
     position: absolute;
-    right: 30px;
     top: 50%;
     transform: translate(0,-50%);
     z-index: 1;
@@ -171,14 +147,13 @@ export default defineComponent({
     position: absolute;
     top: 100%;
     width: 100%;
-    min-width: 300px;
     min-height: 10px;
     border-radius: 8px;
     border: 1px solid #eee;
     box-shadow: 10px 10px 0 0 rgba(black,.03);
     background: white;
-    padding: 10px 30px;
-    animation: menu 0.3s ease forwards;
+    padding: 20px 30px;
+    margin: 1.5em 0em 0em 2em;
 
     .menuArrow {
       width: 20px;
