@@ -8,41 +8,46 @@
     ></button>
 
     <div class="blue" :class="{'hidden hidden--blue': showNavigation}">
-      <div class='search'>
-        <em class="fas fa-search"></em>
-        <Search />
-      </div>
+      <Dropdown>
+        <div class='search'>
+          <em class="fas fa-search"></em>
+          <Search />
+        </div>
+      </Dropdown>
     </div>
 
     <div class="red" :class="{'hidden--red': showNavigation}">
-      <em class="fas fa-sort-alpha-up" @click="sortByAlphabet" />
-      <em class="fas fa-sort-alpha-down-alt" @click="sortByAlphabetReverse" />
+      <Dropdown>
+        <em class="fas fa-sort-alpha-up" @click="sortByAlphabet" />
+        <em class="fas fa-sort-alpha-down-alt" @click="sortByAlphabetReverse" />
+      </Dropdown>
     </div>
+
     <div class="orange" :class="{'hidden--orange': showNavigation}">
-      <Dropdown :menu-title="dropdownSelection">
-
-          <section
-          v-for="category in CATEGORIES"
-          :key="category.category"
-          class="option"
-          @click="handleDropdown(category)"
-          >
-            <button>{{category.category}}</button>
-          </section>
-
-        </Dropdown>
+      <Dropdown>
+        <section
+        v-for="category in CATEGORIES"
+        :key="category.category"
+        class="option"
+        @click="handleDropdown(category)"
+        >
+          <button>{{category.category}}</button>
+        </section>
+      </Dropdown>
     </div>
+
     <div class="black" :class="{'hidden--black': showNavigation}">
         <router-link to="/" @click="scrollToTop">
         <em class="fas fa-home" />
       </router-link>
     </div>
-    <div class="white" :class="{'hidden--white': showNavigation}">
 
+    <div class="white" :class="{'hidden--white': showNavigation}">
       <router-link to="/favorites" @click="scrollToTop">
             <em class="far fa-heart" />
         </router-link>
     </div>
+
   </div>
 </template>
 

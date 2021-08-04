@@ -1,7 +1,7 @@
 <template>
-    <section class="dropDownMenuWrapper" @click="openClose">
+    <section class="dropDownMenuWrapper">
 
-        <div class="iconWrapper">
+        <div class="iconWrapper" @click="openClose">
             <button class="dropDownMenuButton" ref="menu" ></button>
             <div class="bar1" :class="{ 'bar1--open' : isOpen }" />
             <div class="bar2" :class="{ 'bar2--open' : isOpen }" />
@@ -20,7 +20,6 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Dropdown',
-  props: ['menuTitle'],
 
   methods: {
     openClose() {
@@ -145,24 +144,21 @@ export default defineComponent({
 
   .dropdownMenu {
     position: absolute;
-    top: 100%;
-    width: 100%;
     min-height: 10px;
+    left: 3em;
+    top: -0.5em;
     border-radius: 8px;
     border: 1px solid #eee;
     box-shadow: 10px 10px 0 0 rgba(black,.03);
     background: white;
     padding: 20px 30px;
-    margin: 1.5em 0em 0em 2em;
 
     .menuArrow {
       width: 20px;
       height: 20px;
       position: absolute;
-      top: -10px;
-      left: 20px;
-      border-left: 1px solid #eee;
-      border-top: 1px solid #eee;
+      top: 0.75em;
+      left: -9px;
       background: white;
       transform: rotate(45deg);
       border-radius: 4px 0 0 0;
