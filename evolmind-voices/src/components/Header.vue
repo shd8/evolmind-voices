@@ -211,9 +211,6 @@ em {
   color: $grey;
 }
 
-.fa-home,
-.fa-heart,
-.fa-play-circle,
 .fa-sort-alpha-up,
 .fa-sort-alpha-down-alt {
   &:hover {
