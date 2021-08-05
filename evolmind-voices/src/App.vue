@@ -1,6 +1,7 @@
 <template>
   <Header />
   <CurrentCategory />
+  <InputString />
   <div class="container">
     <router-view/>
   </div>
@@ -11,6 +12,7 @@ import { defineComponent } from 'vue';
 import { mapState, mapActions } from 'vuex';
 import Header from '@/components/Header.vue';
 import CurrentCategory from '@/components/CurrentCategory.vue';
+import InputString from '@/components/InputString.vue';
 
 export default defineComponent({
   name: 'App',
@@ -18,6 +20,7 @@ export default defineComponent({
   components: {
     Header,
     CurrentCategory,
+    InputString,
   },
 
   computed: {
