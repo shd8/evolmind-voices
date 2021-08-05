@@ -41,6 +41,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 2em;
 
   span {
     border-radius: 50%;

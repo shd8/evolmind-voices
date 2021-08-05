@@ -2,6 +2,7 @@
   <Header />
   <CurrentCategory />
   <InputString/>
+  <RandomVoice />
   <div class="container">
     <router-view/>
   </div>
@@ -13,6 +14,7 @@ import { mapState, mapActions } from 'vuex';
 import Header from '@/components/Header.vue';
 import CurrentCategory from '@/components/CurrentCategory.vue';
 import InputString from '@/components/InputString.vue';
+import RandomVoice from '@/components/RandomVoice.vue';
 
 export default defineComponent({
   name: 'App',
@@ -21,6 +23,7 @@ export default defineComponent({
     Header,
     CurrentCategory,
     InputString,
+    RandomVoice,
   },
 
   computed: {
