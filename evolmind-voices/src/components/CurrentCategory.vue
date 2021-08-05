@@ -20,6 +20,11 @@ export default defineComponent({
 
 </script>
 
-<style>
+<style lang="scss" scoped>
 
+  p {
+    font-size: 3em;
+    padding: 1.5em 0.5em 0.5em 0.5em;
+    letter-spacing: 0.1em;
+  }
 </style>

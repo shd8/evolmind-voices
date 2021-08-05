@@ -1,7 +1,7 @@
 <template>
   <Header />
   <CurrentCategory />
-  <InputString />
+  <InputString/>
   <div class="container">
     <router-view/>
   </div>
@@ -26,6 +26,7 @@ export default defineComponent({
   computed: {
     ...mapState([
       'voices',
+      'inputString',
     ]),
   },
 
