@@ -288,6 +288,7 @@ em {
   padding: 0.5em;
 
   span {
+    cursor: pointer;
     font-family: Avenir, Helvetica, Arial, sans-serif;
     padding-bottom: 0.3em;
     background-image: linear-gradient(

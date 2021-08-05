@@ -113,7 +113,7 @@ button {
 }
 
 .container {
-  padding-top: 8em;
+  padding-top: 1em;
 }
 
 html {
