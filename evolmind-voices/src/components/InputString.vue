@@ -22,10 +22,12 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/_colors.scss';
 
   p {
     padding: 0.5em;
     font-size: 1.5em;
+    color: $details;
   }
 
   .emptyInput {

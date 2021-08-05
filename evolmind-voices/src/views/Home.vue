@@ -31,4 +31,10 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 </style>

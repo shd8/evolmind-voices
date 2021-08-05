@@ -37,6 +37,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+@import '../styles/_colors.scss';
 
   input {
     font-family: 'Inconsolata', monospace;
@@ -49,12 +50,12 @@ export default defineComponent({
     height: 3.5em;
     outline: none;
     border: none;
-    background: crimson;
+    background: $details;
     color: white;
-    text-shadow: 0 0 10px crimson;
+    text-shadow: 0 0 10px $details;
     padding: 0em 1em 0em 2em;
     border-radius: 30px;
-    box-shadow: 0 0 25px 0 crimson,
+    box-shadow: 0 0 25px 0 $details,
                 0 20px 25px 0 rgba(0, 0, 0, 0.2);
     transition: all 1s;
     font-weight: bolder;
@@ -71,7 +72,7 @@ export default defineComponent({
     }
 
     &:focus {
-      box-shadow: 0 0 5px red,
+      box-shadow: 0 0 5px $details,
                 0 0 20px rgba(255, 38, 0, 0.8),
                 0 0 35px rgba(255, 38, 0, 0.7),
                 0 0 50px rgba(255, 38, 0, 0.6);
