@@ -1,6 +1,8 @@
+import { Voice } from '@/types/interfaces';
+
 const state = {
-  voices: [],
-  favorites: [],
+  voices: [] as Array<Voice>,
+  favorites: [] as Array<Voice>,
   currentCategory: '',
   inputString: '',
 };

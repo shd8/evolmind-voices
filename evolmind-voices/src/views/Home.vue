@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <VoicesList v-if="filteredVoices.length" :list="filteredVoices" />
-    <VoicesList v-else :list="voices" />
+    <VoicesList :list="filteredVoices" />
   </div>
 </template>
 

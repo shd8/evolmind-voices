@@ -1,7 +1,6 @@
 <template>
   <div class="favorites">
-    <VoicesList v-if="filteredFavorites.length" :list="filteredFavorites" />
-    <VoicesList v-else-if="favorites.length" :list="favorites" />
+    <VoicesList v-if="favorites.length" :list="filteredFavorites" />
     <section v-else>
       <p>You have no favorites songs yet</p>
     </section>
