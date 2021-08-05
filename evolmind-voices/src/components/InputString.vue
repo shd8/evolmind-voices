@@ -1,5 +1,5 @@
 <template>
-  <p v-if="inputString" class="input">Results matching "{{inputString}}":</p>
+  <p v-if="inputString">Results matching "{{inputString}}":</p>
   <p v-else class="emptyInput">-</p>
 </template>
 
@@ -23,14 +23,12 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 
-  .input{
+  p {
     padding: 0.5em;
     font-size: 1.5em;
   }
 
   .emptyInput {
-    padding: 0.5em;
-    font-size: 1.5em;
     color: transparent;
   }
 
