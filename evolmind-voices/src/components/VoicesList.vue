@@ -2,6 +2,7 @@
   <section>
     <span>{{list.length}}</span>
     <p>results</p>
+    <ClearFilters />
   </section>
   <ul>
     <li
@@ -17,12 +18,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import VoiceIcon from '@/components/VoiceIcon.vue';
+import ClearFilters from '@/components/ClearFilters.vue';
 
 export default defineComponent({
   name: 'VoicesList',
   props: ['list'],
   components: {
     VoiceIcon,
+    ClearFilters,
   },
 
 });
@@ -41,7 +44,11 @@ section {
 
   span {
     border-radius: 50%;
-    padding: 0.5em;
+    width: 2em;
+    height: 2em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
     border: 1px solid $details;
     color: $details;
 

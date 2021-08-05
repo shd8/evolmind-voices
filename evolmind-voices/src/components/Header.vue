@@ -175,6 +175,7 @@ export default defineComponent({
 }
 
 .header__navigation {
+  cursor: pointer;
   position: absolute;
   left: 0;
   border-style: hidden;

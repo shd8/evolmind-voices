@@ -30,6 +30,12 @@ const mutations = {
   updateCategoryTag(state: State, payload: string): void {
     state.currentCategory = payload;
   },
+
+  clearFilters(state: State): void {
+    console.log('hola');
+    state.currentCategory = '';
+    state.inputString = '';
+  },
 };
 
 export default mutations;
