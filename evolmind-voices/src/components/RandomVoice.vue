@@ -6,7 +6,7 @@
         :isModalOpen="showModal"
         @toggleModal='toggleModal'
         >
-            <p>A random voice generator</p>
+          <RandomVoiceGenerator />
         </Modal>
     </div>
 
@@ -15,12 +15,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Modal from '@/components/Modal.vue';
+import RandomVoiceGenerator from '@/components/RandomVoiceGenerator.vue';
 
 export default defineComponent({
   name: 'RandomVoice',
 
   components: {
     Modal,
+    RandomVoiceGenerator,
   },
 
   methods: {
@@ -56,14 +58,14 @@ export default defineComponent({
         font-size: 3em;
         transition: 500ms ease-out;
 
-          &:hover {
-            transition: 500ms ease-out;
-            text-shadow: 0 0 5px white,
-                        0 0 20px rgba(255, 38, 0, 0.8),
-                        0 0 35px rgba(255, 38, 0, 0.7),
-                        0 0 50px rgba(255, 38, 0, 0.6);
-            border-color: #fff;
-  }
+      &:hover {
+        transition: 500ms ease-out;
+        text-shadow: 0 0 5px white,
+                    0 0 20px rgba(255, 38, 0, 0.8),
+                    0 0 35px rgba(255, 38, 0, 0.7),
+                    0 0 50px rgba(255, 38, 0, 0.6);
+        border-color: #fff;
+      }
     }
 }
 

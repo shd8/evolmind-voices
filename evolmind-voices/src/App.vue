@@ -124,6 +124,10 @@ html {
   p {
     color: $details;
   }
+
+  button {
+    outline: none;
+  }
 }
 
 em:before {

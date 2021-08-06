@@ -105,9 +105,12 @@ export default defineComponent({
       width: 100%;
       height: 100vh;
     &--displayed {
-      transform: translateY(0%);
       width: 100%;
       height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
     }
   }
   &__header {
