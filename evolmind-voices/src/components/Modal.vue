@@ -140,8 +140,8 @@ export default defineComponent({
     font-size: 5em;
   }
   .modal__header-button {
-    right: 3em;
-    top: 3em;
+    right: 1em;
+    top: 1em;
   }
   .modal__window {
     width: 80%;
@@ -150,6 +150,8 @@ export default defineComponent({
   .modal__window--displayed {
     width: 80%;
     height: 80%;
+    border: 1px solid crimson;
+    border-radius: 1em 1em 0em 1em;
   }
 }
 </style>
