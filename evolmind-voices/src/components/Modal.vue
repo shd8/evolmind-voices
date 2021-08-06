@@ -118,7 +118,6 @@ export default defineComponent({
 }
 .modal__header-button {
   border: none;
-  background-color: white;
   border-radius: 3em;
   position: absolute;
   right: 0.5em;

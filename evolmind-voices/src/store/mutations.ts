@@ -32,7 +32,6 @@ const mutations = {
   },
 
   clearFilters(state: State): void {
-    console.log('hola');
     state.currentCategory = '';
     state.inputString = '';
   },
