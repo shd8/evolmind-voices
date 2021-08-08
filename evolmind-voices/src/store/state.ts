@@ -5,6 +5,7 @@ const state = {
   favorites: [] as Array<Voice>,
   currentCategory: '',
   inputString: '',
+  randomVoice: {} as Voice,
 };
 
 export default state;

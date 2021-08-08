@@ -35,6 +35,10 @@ const mutations = {
     state.currentCategory = '';
     state.inputString = '';
   },
+
+  generateRandomVoice(state: State): void {
+    state.randomVoice = state.voices[Math.floor(Math.random() * state.voices.length)];
+  },
 };
 
 export default mutations;

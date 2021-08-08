@@ -15,6 +15,7 @@ interface State {
     favorites: Array<Voice>,
     currentCategory: string,
     inputString: string,
+    randomVoice: Voice
 }
 
 export { Voice, State, Category };
