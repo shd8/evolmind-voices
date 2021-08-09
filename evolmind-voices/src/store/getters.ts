@@ -37,6 +37,10 @@ const getters = {
     return CATEGORIES
       .find((category) => category.tag === state.currentCategory).category;
   },
+
+  isInFavorites:
+  (state: State) => (voiceId: string):boolean => state.favorites
+    .some((favorite) => favorite.id === voiceId),
 };
 
 export default getters;

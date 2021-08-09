@@ -7,15 +7,27 @@
     >
     <span>{{voice.name}}</span>
   </div>
+  <AddToFavorites :isInFavorites="isInFavorites(voice.id)" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { mapMutations } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
+import AddToFavorites from '@/components/AddToFavorites.vue';
 
 export default defineComponent({
   name: 'VoiceIcon',
   props: ['voice', 'isRandom'],
+
+  components: {
+    AddToFavorites,
+  },
+
+  computed: {
+    ...mapGetters([
+      'isInFavorites',
+    ]),
+  },
 
   methods: {
     ...mapMutations([
