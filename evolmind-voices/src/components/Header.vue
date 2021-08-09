@@ -205,6 +205,7 @@ export default defineComponent({
   background-color: $base;
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 em {
