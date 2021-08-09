@@ -17,4 +17,9 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import '../styles/_colors.scss';
 
+em {
+    padding: 0.5em;
+    color: $details;
+}
+
 </style>

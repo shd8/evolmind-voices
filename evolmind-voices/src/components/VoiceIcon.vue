@@ -2,12 +2,16 @@
   <div :class="{'random-icon': isRandom}">
     <img
     :src="require(`../assets/${voice.icon}`)"
+    :class="{'favorite-image': isInFavorites(voice.id)}"
     :alt="voice.icon"
     @click="updateFavorites(voice)"
     >
     <span>{{voice.name}}</span>
   </div>
-  <AddToFavorites :isInFavorites="isInFavorites(voice.id)" />
+  <AddToFavorites
+  :isInFavorites="isInFavorites(voice.id)"
+  class="add-to-favorites"
+  />
 </template>
 
 <script lang="ts">
@@ -43,12 +47,14 @@ export default defineComponent({
 div {
   display: flex;
   flex-direction: column;
-  padding: 0em 3em;
+  align-items: center;
+  padding: 1em 3em;
   color: $details;
   width: 7em;
 
   span {
-    word-wrap: break-word;
+    width: 9em;
+    padding: 0.5em 0em 1em 0em;
   }
 }
 
@@ -66,6 +72,7 @@ div {
 img {
   cursor: pointer;
   border-radius: 50%;
+  border: 2px solid transparent;
 
   &:hover {
     transition: ease-in-out 100ms;
@@ -77,6 +84,18 @@ img {
                 0 0 50px rgba(255, 38, 0, 0.6);
     border-color: #fff;
   }
+}
+
+.favorite-image {
+  border: 2px solid $details;
+}
+
+.add-to-favorites {
+  border-radius: 50%;
+  border: 1px solid $details;
+  position: absolute;
+  margin: -10em 0em 0em 2em;
+  background-color: $base;
 }
 
 @media (max-width: 500px) {
