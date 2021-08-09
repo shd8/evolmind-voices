@@ -19,6 +19,7 @@
 
     <div class="red" :class="{'hidden--red': showNavigation}">
       <Dropdown
+      class="dropdown"
       iconClass="fas fa-sort-amount-up-alt"
       :dropdownSetter="() => setOpenedDropdown('sort')"
       :isOpen="openedDropdown === 'sort'"
