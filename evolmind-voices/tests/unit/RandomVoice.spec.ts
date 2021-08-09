@@ -1,10 +1,10 @@
 import { mount } from '@vue/test-utils';
-import Modal from '@/components/Modal.vue';
+import RandomVoice from '@/components/RandomVoice.vue';
 import state from '../mockedState';
 
 describe('Given a Modal component', () => {
   test('Mount a Modal component', () => {
-    const wrapper = mount(Modal, {
+    const wrapper = mount(RandomVoice, {
       global: {
         mocks: {
           methods: {
@@ -29,7 +29,7 @@ describe('Given a Modal component', () => {
   });
 
   test('Click on modal button', async () => {
-    const wrapper = mount(Modal, {
+    const wrapper = mount(RandomVoice, {
       global: {
         mocks: {
           methods: {
@@ -52,9 +52,7 @@ describe('Given a Modal component', () => {
       },
     });
 
-    await wrapper.find('.modal__header-button').trigger('click');
-
-    wrapper.unmount();
+    await wrapper.find('.fa-dice').trigger('click');
     // Assert the rendered text of the component
     expect(wrapper.text()).toContain('');
   });

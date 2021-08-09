@@ -22,9 +22,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -36,16 +36,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -127,9 +127,7 @@
 <a name='L69'></a><a href='#L69'>69</a>
 <a name='L70'></a><a href='#L70'>70</a>
 <a name='L71'></a><a href='#L71'>71</a>
-<a name='L72'></a><a href='#L72'>72</a>
-<a name='L73'></a><a href='#L73'>73</a>
-<a name='L74'></a><a href='#L74'>74</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L72'></a><a href='#L72'>72</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -142,13 +140,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -159,17 +155,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -203,25 +199,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
-&nbsp;
-    &lt;div class="random-voice"&gt;
-        &lt;em class="fas fa-dice" @click='handleToggleModal' /&gt;
-        &lt;Modal
-        :isModalOpen="showModal"
-        @toggleModal='toggleModal'
-        &gt;
-          &lt;RandomVoiceGenerator /&gt;
-        &lt;/Modal&gt;
-    &lt;/div&gt;
-&nbsp;
+  &lt;div class="random-voice"&gt;
+    &lt;em class="fas fa-dice" @click='handleToggleModal' /&gt;
+    &lt;Modal
+    :isModalOpen="showModal"
+    @toggleModal='toggleModal'
+    &gt;
+      &lt;RandomVoiceGenerator /&gt;
+    &lt;/Modal&gt;
+  &lt;/div&gt;
 &lt;/template&gt;
 &nbsp;
 &lt;script lang="ts"&gt;
-<span class="cstat-no" title="statement not covered" >import { defineComponent } from 'vue';</span>
-<span class="cstat-no" title="statement not covered" >import Modal from '@/components/Modal.vue';</span>
-<span class="cstat-no" title="statement not covered" >import RandomVoiceGenerator from '@/components/RandomVoiceGenerator.vue';</span>
+import { defineComponent } from 'vue';
+import Modal from '@/components/Modal.vue';
+import RandomVoiceGenerator from '@/components/RandomVoiceGenerator.vue';
 &nbsp;
-export default <span class="cstat-no" title="statement not covered" >defineComponent({</span>
+export default defineComponent({
   name: 'RandomVoice',
 &nbsp;
   components: {
@@ -231,18 +225,18 @@ export default <span class="cstat-no" title="statement not covered" >defineCompo
 &nbsp;
   methods: {
 &nbsp;
-    toggleModal<span class="fstat-no" title="function not covered" >() {</span>
-<span class="cstat-no" title="statement not covered" >      this.s</span>howModal = !this.showModal;
+    toggleModal() {
+      this.showModal = !this.showModal;
     },
 &nbsp;
-    handleToggleModal<span class="fstat-no" title="function not covered" >() {</span>
-<span class="cstat-no" title="statement not covered" >      this.t</span>oggleModal();
+    handleToggleModal() {
+      this.toggleModal();
     },
 &nbsp;
   },
 &nbsp;
-  data<span class="fstat-no" title="function not covered" >() {</span>
-<span class="cstat-no" title="statement not covered" >    return {</span>
+  data() {
+    return {
       showModal: false,
     };
   },
@@ -282,7 +276,7 @@ export default <span class="cstat-no" title="statement not covered" >defineCompo
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Aug 09 2021 13:29:26 GMT+0200 (hora de verano de Europa central)
+                at Mon Aug 09 2021 13:35:28 GMT+0200 (hora de verano de Europa central)
             </div>
         </div>
         <script src="../../prettify.js"></script>

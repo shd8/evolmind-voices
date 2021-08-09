@@ -1,15 +1,13 @@
 <template>
-
-    <div class="random-voice">
-        <em class="fas fa-dice" @click='handleToggleModal' />
-        <Modal
-        :isModalOpen="showModal"
-        @toggleModal='toggleModal'
-        >
-          <RandomVoiceGenerator />
-        </Modal>
-    </div>
-
+  <div class="random-voice">
+    <em class="fas fa-dice" @click='handleToggleModal' />
+    <Modal
+    :isModalOpen="showModal"
+    @toggleModal='toggleModal'
+    >
+      <RandomVoiceGenerator />
+    </Modal>
+  </div>
 </template>
 
 <script lang="ts">

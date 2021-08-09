@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1628508566319" clover="3.2.0">
-  <project timestamp="1628508566319" name="All files">
-    <metrics statements="135" coveredstatements="9" conditionals="40" coveredconditionals="3" methods="49" coveredmethods="6" elements="224" coveredelements="18" complexity="0" loc="135" ncloc="135" packages="6" files="22" classes="22"/>
+<coverage generated="1628508929004" clover="3.2.0">
+  <project timestamp="1628508929004" name="All files">
+    <metrics statements="135" coveredstatements="26" conditionals="40" coveredconditionals="6" methods="49" coveredmethods="9" elements="224" coveredelements="41" complexity="0" loc="135" ncloc="135" packages="6" files="22" classes="22"/>
     <package name="src">
       <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="App.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/App.vue">
@@ -24,11 +24,11 @@
       </file>
     </package>
     <package name="src.components">
-      <metrics statements="64" coveredstatements="9" conditionals="10" coveredconditionals="3" methods="19" coveredmethods="6"/>
+      <metrics statements="64" coveredstatements="26" conditionals="10" coveredconditionals="6" methods="19" coveredmethods="9"/>
       <file name="AddToFavorites.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/components/AddToFavorites.vue">
-        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
       </file>
       <file name="ClearFilters.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/components/ClearFilters.vue">
         <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -70,39 +70,39 @@
         <line num="10" count="0" type="stmt"/>
       </file>
       <file name="Modal.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/components/Modal.vue">
-        <metrics statements="11" coveredstatements="9" conditionals="8" coveredconditionals="3" methods="7" coveredmethods="6"/>
+        <metrics statements="11" coveredstatements="8" conditionals="8" coveredconditionals="6" methods="7" coveredmethods="5"/>
         <line num="31" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
         <line num="34" count="1" type="stmt"/>
-        <line num="43" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="46" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="52" count="0" type="stmt"/>
+        <line num="43" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="46" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="52" count="1" type="stmt"/>
         <line num="59" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="63" count="1" type="stmt"/>
-        <line num="72" count="1" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
         <line num="73" count="0" type="stmt"/>
         <line num="78" count="2" type="stmt"/>
       </file>
       <file name="RandomVoice.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/components/RandomVoice.vue">
-        <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
       </file>
       <file name="RandomVoiceGenerator.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/components/RandomVoiceGenerator.vue">
-        <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
+        <metrics statements="8" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
         <line num="39" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
       </file>
       <file name="Search.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/components/Search.vue">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -112,11 +112,11 @@
         <line num="30" count="0" type="stmt"/>
       </file>
       <file name="VoiceIcon.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/components/VoiceIcon.vue">
-        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
       </file>
       <file name="VoicesList.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/components/VoicesList.vue">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
