@@ -29,11 +29,15 @@
 <script lang='ts'>
 /* eslint-disable no-unused-expressions */
 import { defineComponent } from 'vue';
+import { mapMutations } from 'vuex';
 
 export default defineComponent({
   name: 'Modal',
+
   components: { },
+
   props: ['isModalOpen'],
+
   computed: {
     displayModalClass(): 'modal--displayed' | '' {
       return this.isModalOpen ? 'modal--displayed' : '';
@@ -42,6 +46,7 @@ export default defineComponent({
       return this.isModalOpen ? 'modal__window--displayed' : '';
     },
   },
+
   watch: {
     isModalOpen(value:boolean):void {
       value
@@ -49,17 +54,26 @@ export default defineComponent({
         : this.body.classList.remove('body--overflow-hidden');
     },
   },
+
   mounted() {
     this.isModalOpen ? this.body.classList.add('body--overflow-hidden') : '';
   },
+
   unmounted(): void {
     this.body.classList.remove('body--overflow-hidden');
   },
+
   methods: {
+    ...mapMutations([
+      'clearRandomVoice',
+    ]),
+
     toggleModal() {
+      this.clearRandomVoice();
       this.$emit('toggle-modal');
     },
   },
+
   data() {
     return {
       body: document.body,

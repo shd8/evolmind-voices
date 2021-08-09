@@ -9,6 +9,7 @@
     <span>{{voice.name}}</span>
   </div>
   <AddToFavorites
+  v-if="voice.id !== randomVoice.id"
   :isInFavorites="isInFavorites(voice.id)"
   class="add-to-favorites"
   />
@@ -16,7 +17,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { mapGetters, mapMutations } from 'vuex';
+import { mapGetters, mapMutations, mapState } from 'vuex';
 import AddToFavorites from '@/components/AddToFavorites.vue';
 
 export default defineComponent({
@@ -30,6 +31,10 @@ export default defineComponent({
   computed: {
     ...mapGetters([
       'isInFavorites',
+    ]),
+
+    ...mapState([
+      'randomVoice',
     ]),
   },
 

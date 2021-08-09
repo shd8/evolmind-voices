@@ -36,6 +36,10 @@ const mutations = {
     state.inputString = '';
   },
 
+  clearRandomVoice(state:State):void {
+    state.randomVoice = {} as Voice;
+  },
+
   generateRandomVoice(state: State): void {
     state.randomVoice = state.voices[Math.floor(Math.random() * state.voices.length)];
   },
