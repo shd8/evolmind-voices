@@ -1,5 +1,8 @@
 <template>
-  <div :class="{'random-icon': isRandom}">
+  <div
+  :class="{'random-icon': isRandom}"
+  @click="updateFavorites(voice)"
+  >
     <img
     :src="require(`../assets/${voice.icon}`)"
     :class="{'favorite-image': isInFavorites(voice.id)}"
