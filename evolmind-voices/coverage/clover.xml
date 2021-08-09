@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1628509091663" clover="3.2.0">
-  <project timestamp="1628509091664" name="All files">
-    <metrics statements="135" coveredstatements="2" conditionals="40" coveredconditionals="0" methods="49" coveredmethods="0" elements="224" coveredelements="2" complexity="0" loc="135" ncloc="135" packages="6" files="22" classes="22"/>
+<coverage generated="1628509737401" clover="3.2.0">
+  <project timestamp="1628509737401" name="All files">
+    <metrics statements="135" coveredstatements="17" conditionals="40" coveredconditionals="0" methods="49" coveredmethods="0" elements="224" coveredelements="17" complexity="0" loc="135" ncloc="135" packages="6" files="22" classes="22"/>
     <package name="src">
       <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="App.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/App.vue">
@@ -17,10 +17,10 @@
       </file>
     </package>
     <package name="src.assets">
-      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="categories.ts" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/assets/categories.ts">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components">
@@ -139,18 +139,18 @@
       </file>
     </package>
     <package name="src.store">
-      <metrics statements="48" coveredstatements="2" conditionals="30" coveredconditionals="0" methods="29" coveredmethods="0"/>
+      <metrics statements="48" coveredstatements="16" conditionals="30" coveredconditionals="0" methods="29" coveredmethods="0"/>
       <file name="actions.ts" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/store/actions.ts">
-        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
       </file>
       <file name="getters.ts" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/store/getters.ts">
-        <metrics statements="21" coveredstatements="0" conditionals="20" coveredconditionals="0" methods="13" coveredmethods="0"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
+        <metrics statements="21" coveredstatements="3" conditionals="20" coveredconditionals="0" methods="13" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
         <line num="7" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="9" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="10" count="0" type="stmt"/>
@@ -169,20 +169,20 @@
         <line num="38" count="0" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
         <line num="43" count="0" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
       </file>
       <file name="index.ts" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/store/index.ts">
-        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
       </file>
       <file name="mutations.ts" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/store/mutations.ts">
-        <metrics statements="15" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="15" coveredmethods="0"/>
-        <line num="3" count="0" type="stmt"/>
+        <metrics statements="15" coveredstatements="2" conditionals="10" coveredconditionals="0" methods="15" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -196,7 +196,7 @@
         <line num="36" count="0" type="stmt"/>
         <line num="40" count="0" type="stmt"/>
         <line num="44" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
       </file>
       <file name="state.ts" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/store/state.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>

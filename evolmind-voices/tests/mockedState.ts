@@ -43,7 +43,7 @@ const mockedState = {
       ],
     },
   ],
-  currentCategory: '',
+  currentCategory: 'horror',
   inputString: '',
   randomVoice: {
     id: 'speechifier-protest',
