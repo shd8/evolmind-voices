@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="{'random-icon': isRandom}">
     <img
     :src="require(`../assets/${voice.icon}`)"
     :alt="voice.icon"
@@ -15,7 +15,7 @@ import { mapMutations } from 'vuex';
 
 export default defineComponent({
   name: 'VoiceIcon',
-  props: ['voice'],
+  props: ['voice', 'isRandom'],
 
   methods: {
     ...mapMutations([
@@ -37,6 +37,17 @@ div {
 
   span {
     word-wrap: break-word;
+  }
+}
+
+.random-icon {
+  img {
+    width: 15em;
+  }
+
+  span {
+    font-size: 2em;
+    padding-bottom: 1em;
   }
 }
 

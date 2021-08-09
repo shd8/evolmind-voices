@@ -1,7 +1,7 @@
 <template>
   <p>Random Voice Generator</p>
   <div v-if="randomVoice.id && showRandomVoice">
-    <VoiceIcon :voice="randomVoice" />
+    <VoiceIcon :voice="randomVoice" :isRandom="true"/>
     <em class="fas fa-redo-alt" @click="hideRandomVoice" />
   </div>
   <em v-else class="fas fa-dice"  @click="handleGenerateRandomVoice"/>
@@ -55,11 +55,12 @@ export default defineComponent({
 
 p {
   font-size: 3em;
-  padding: 1em 0em 2em 0em;
+  padding: 1em 0em;
 }
 
 div {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
