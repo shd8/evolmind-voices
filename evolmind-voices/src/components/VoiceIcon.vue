@@ -4,11 +4,11 @@
     :src="require(`../assets/${voice.icon}`)"
     :class="{'favorite-image': isInFavorites(voice.id)}"
     :alt="voice.icon"
-    @click="updateFavorites(voice)"
     >
     <span>{{voice.name}}</span>
   </div>
   <AddToFavorites
+  @click="updateFavorites(voice)"
   v-if="voice.id !== randomVoice.id"
   :isInFavorites="isInFavorites(voice.id)"
   class="add-to-favorites"
@@ -75,7 +75,6 @@ div {
 }
 
 img {
-  cursor: pointer;
   border-radius: 50%;
   border: 2px solid transparent;
 
@@ -96,6 +95,7 @@ img {
 }
 
 .add-to-favorites {
+  cursor: pointer;
   border-radius: 50%;
   border: 1px solid $details;
   position: absolute;
