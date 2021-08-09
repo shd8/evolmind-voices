@@ -121,4 +121,39 @@ describe('Given a mutation', () => {
       },
     ]);
   });
+
+  test('Update filter string', () => {
+    mutations.updateFilterString(mockedState, 'horror');
+
+    expect(mockedState.inputString).toBe('horror');
+  });
+
+  test('Update voices', () => {
+    const payload = [{
+      id: 'zombie',
+      name: 'Zombie',
+      icon: 'VoicesVoiceIcon03.png',
+      tags: [
+        'horror',
+      ],
+    }];
+    mutations.updateVoices(mockedState, payload);
+
+    expect(mockedState.voices).toEqual([
+      {
+        icon: 'VoicesVoiceIcon03.png',
+        id: 'zombie',
+        name: 'Zombie',
+        tags: [
+          'horror',
+        ],
+      },
+    ]);
+  });
+
+  test('Update category tag', () => {
+    mutations.updateCategoryTag(mockedState, 'horror');
+
+    expect(mockedState.currentCategory).toBe('horror');
+  });
 });
