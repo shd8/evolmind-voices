@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1628504389297" clover="3.2.0">
-  <project timestamp="1628504389297" name="All files">
-    <metrics statements="135" coveredstatements="21" conditionals="40" coveredconditionals="0" methods="50" coveredmethods="0" elements="225" coveredelements="21" complexity="0" loc="135" ncloc="135" packages="6" files="22" classes="22"/>
+<coverage generated="1628504549754" clover="3.2.0">
+  <project timestamp="1628504549754" name="All files">
+    <metrics statements="135" coveredstatements="3" conditionals="40" coveredconditionals="0" methods="50" coveredmethods="0" elements="225" coveredelements="3" complexity="0" loc="135" ncloc="135" packages="6" files="22" classes="22"/>
     <package name="src">
       <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="App.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/App.vue">
@@ -24,23 +24,23 @@
       </file>
     </package>
     <package name="src.components">
-      <metrics statements="64" coveredstatements="13" conditionals="10" coveredconditionals="0" methods="19" coveredmethods="0"/>
+      <metrics statements="64" coveredstatements="3" conditionals="10" coveredconditionals="0" methods="19" coveredmethods="0"/>
       <file name="AddToFavorites.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/components/AddToFavorites.vue">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-      </file>
-      <file name="ClearFilters.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/components/ClearFilters.vue">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-      </file>
-      <file name="CurrentCategory.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/components/CurrentCategory.vue">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="6" count="0" type="stmt"/>
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="7" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
+      </file>
+      <file name="ClearFilters.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/components/ClearFilters.vue">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+      </file>
+      <file name="CurrentCategory.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/components/CurrentCategory.vue">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
       </file>
       <file name="Dropdown.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/components/Dropdown.vue">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -112,18 +112,18 @@
         <line num="30" count="0" type="stmt"/>
       </file>
       <file name="VoiceIcon.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/components/VoiceIcon.vue">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
-        <line num="23" count="2" type="stmt"/>
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
       </file>
       <file name="VoicesList.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/components/VoicesList.vue">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
-        <line num="23" count="2" type="stmt"/>
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.router">
@@ -205,20 +205,20 @@
       </file>
     </package>
     <package name="src.views">
-      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="Favorites.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/views/Favorites.vue">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
       </file>
       <file name="Home.vue" path="/Users/shd8/yummy/evolmind-voices/evolmind-voices/src/views/Home.vue">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
       </file>
     </package>
   </project>

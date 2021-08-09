@@ -1,5 +1,5 @@
 <template>
-    <p>{{currentCategoryName}}</p>
+  <p>{{currentCategoryName}}</p>
 </template>
 
 <script lang="ts">
