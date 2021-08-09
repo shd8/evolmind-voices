@@ -22,30 +22,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">10% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/20</span>
+                <span class='fraction'>16/20</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>5/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">73.33% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/15</span>
+                <span class='fraction'>11/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">13.33% </span>
+                <span class="strong">73.33% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/15</span>
+                <span class='fraction'>11/15</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -114,32 +114,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -152,6 +139,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { State, Voice } from '@/types/interfaces';
 &nbsp;
 const mutations = {
@@ -160,21 +160,21 @@ const mutations = {
 <span class="cstat-no" title="statement not covered" >    state.</span>voices = [...payload];
   },
 &nbsp;
-<span class="fstat-no" title="function not covered" >  updateFavorites(</span>state: State, payload: Voice): void {
+  updateFavorites(state: State, payload: Voice): void {
     // eslint-disable-next-line no-unused-expressions
-<span class="cstat-no" title="statement not covered" >    state.</span>favorites.some((<span class="fstat-no" title="function not covered" >favorite) =&gt; <span class="cstat-no" title="statement not covered" >f</span>avorite.id === payload.id)</span>
-      ? state.favorites = state.favorites.filter((<span class="fstat-no" title="function not covered" >favorite) =&gt; <span class="cstat-no" title="statement not covered" >f</span>avorite.id !== payload.id)</span>
+    state.favorites.some((favorite) =&gt; favorite.id === payload.id)
+      ? <span class="branch-0 cbranch-no" title="branch not covered" >state.favorites = state.</span>favorites.filter((<span class="fstat-no" title="function not covered" >favorite) =&gt; <span class="cstat-no" title="statement not covered" >f</span>avorite.id !== payload.id)</span>
       : state.favorites.push(payload);
   },
 &nbsp;
-<span class="fstat-no" title="function not covered" >  sortByAlphabet(</span>state: State): void {
-<span class="cstat-no" title="statement not covered" >    state.</span>voices.sort(<span class="fstat-no" title="function not covered" >(a</span>, b) =&gt; (<span class="cstat-no" title="statement not covered" >a.name &gt; b.name ? 1 : -1));</span>
-<span class="cstat-no" title="statement not covered" >    state.</span>favorites.sort(<span class="fstat-no" title="function not covered" >(a</span>, b) =&gt; (<span class="cstat-no" title="statement not covered" >a.name &gt; b.name ? 1 : -1));</span>
+  sortByAlphabet(state: State): void {
+    state.voices.sort((a, b) =&gt; (a.name &gt; b.name ? 1 : <span class="branch-1 cbranch-no" title="branch not covered" >-1));</span>
+    state.favorites.sort((a, b) =&gt; (a.name &gt; b.name ? 1 : <span class="branch-1 cbranch-no" title="branch not covered" >-1));</span>
   },
 &nbsp;
-<span class="fstat-no" title="function not covered" >  sortByAlphabetReverse(</span>state: State): void {
-<span class="cstat-no" title="statement not covered" >    state.</span>voices.sort(<span class="fstat-no" title="function not covered" >(a</span>, b) =&gt; (<span class="cstat-no" title="statement not covered" >a.name &gt; b.name ? 1 : -1)).r</span>everse();
-<span class="cstat-no" title="statement not covered" >    state.</span>favorites.sort(<span class="fstat-no" title="function not covered" >(a</span>, b) =&gt; (<span class="cstat-no" title="statement not covered" >a.name &gt; b.name ? 1 : -1)).r</span>everse();
+  sortByAlphabetReverse(state: State): void {
+    state.voices.sort((a, b) =&gt; (a.name &gt; b.name ? 1 : <span class="branch-1 cbranch-no" title="branch not covered" >-1)).r</span>everse();
+    state.favorites.sort((a, b) =&gt; (a.name &gt; b.name ? 1 : <span class="branch-1 cbranch-no" title="branch not covered" >-1)).r</span>everse();
   },
 &nbsp;
 <span class="fstat-no" title="function not covered" >  updateFilterString(</span>state: State, payload: string): void {
@@ -185,17 +185,17 @@ const mutations = {
 <span class="cstat-no" title="statement not covered" >    state.</span>currentCategory = payload;
   },
 &nbsp;
-<span class="fstat-no" title="function not covered" >  clearFilters(</span>state: State): void {
-<span class="cstat-no" title="statement not covered" >    state.</span>currentCategory = '';
-<span class="cstat-no" title="statement not covered" >    state.</span>inputString = '';
+  clearFilters(state: State): void {
+    state.currentCategory = '';
+    state.inputString = '';
   },
 &nbsp;
-<span class="fstat-no" title="function not covered" >  clearRandomVoice(</span>state:State):void {
-<span class="cstat-no" title="statement not covered" >    state.</span>randomVoice = {} as Voice;
+  clearRandomVoice(state:State):void {
+    state.randomVoice = {} as Voice;
   },
 &nbsp;
-<span class="fstat-no" title="function not covered" >  generateRandomVoice(</span>state: State): void {
-<span class="cstat-no" title="statement not covered" >    state.</span>randomVoice = state.voices[Math.floor(Math.random() * state.voices.length)];
+  generateRandomVoice(state: State): void {
+    state.randomVoice = state.voices[Math.floor(Math.random() * state.voices.length)];
   },
 };
 &nbsp;
@@ -207,7 +207,7 @@ export default mutations;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Aug 09 2021 13:50:38 GMT+0200 (hora de verano de Europa central)
+                at Mon Aug 09 2021 16:20:47 GMT+0200 (hora de verano de Europa central)
             </div>
         </div>
         <script src="../../prettify.js"></script>
