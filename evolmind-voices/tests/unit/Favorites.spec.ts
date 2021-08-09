@@ -1,17 +1,17 @@
 import { mount } from '@vue/test-utils';
-import Home from '@/views/Home.vue';
+import Favorites from '@/views/Favorites.vue';
 import state from '../mockedState';
 
-describe('Given a Home view', () => {
+describe('Given a Favorite view', () => {
   test('Should mount a Home view', () => {
-    const wrapper = mount(Home, {
+    const wrapper = mount(Favorites, {
       global: {
         mocks: {
           $store: {
             state,
             getters: {
               isInFavorites: jest.fn(),
-              filteredVoices: [
+              filteredFavorites: [
                 {
                   id: 'speechifier-protest',
                   name: 'Speechifier protest',
