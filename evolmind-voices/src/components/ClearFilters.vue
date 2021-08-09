@@ -1,15 +1,23 @@
 <template>
   <em
+  v-if="currentCategory !== '' || inputString !== ''"
   @click="clearFilters"
   class="far fa-window-close" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { mapMutations } from 'vuex';
+import { mapMutations, mapState } from 'vuex';
 
 export default defineComponent({
   name: 'ClearFilters',
+
+  computed: {
+    ...mapState([
+      'currentCategory',
+      'inputString',
+    ]),
+  },
 
   methods: {
 
