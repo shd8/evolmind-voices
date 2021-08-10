@@ -142,7 +142,6 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-// @import "../styles/_mixins.scss";
 @import '../styles/_colors.scss';
 @import '../assets/_global-styles.scss';
 

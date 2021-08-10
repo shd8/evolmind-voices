@@ -25,7 +25,7 @@ export default defineComponent({
 
   p {
     font-size: 3em;
-    padding: 1.5em 0.5em 0.5em 0.5em;
+    padding: 2.5em 0.5em 0.5em 0.5em;
     letter-spacing: 0.1em;
   }
 

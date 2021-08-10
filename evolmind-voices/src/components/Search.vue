@@ -38,6 +38,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 @import '../styles/_colors.scss';
+@import '../assets/_global-styles.scss';
 
   input {
     font-family: 'Inconsolata', monospace;
@@ -61,7 +62,7 @@ export default defineComponent({
     font-weight: bolder;
     letter-spacing: 0.1em;
 
-    width: 22em;
+    width: 30em;
     cursor: text;
 
     &::placeholder {
@@ -78,5 +79,21 @@ export default defineComponent({
                 0 0 50px rgba(255, 38, 0, 0.6);
     }
   }
+
+@media (max-width: $mobile) {
+  input {
+    width: 22em;
+    top: 100em;
+    left: -14.5em;
+  }
+}
+
+@media (min-width: $mobile) and (max-width: $tablet) {
+  input {
+    width: 35em;
+    top: 100em;
+    left: -400%;
+  }
+}
 
 </style>

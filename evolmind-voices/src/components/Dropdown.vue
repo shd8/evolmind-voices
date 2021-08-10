@@ -19,7 +19,10 @@
           <div class="bar3" :class="{ 'bar3--open' : isOpen }" />
         </div>
 
-        <section class="dropdownMenu" v-if="isOpen">
+        <section
+        class="dropdownMenu"
+        :class="{'search-dropdown': iconClass === 'fas fa-search'}"
+        v-if="isOpen">
             <div class="menuArrow" />
             <slot/>
         </section>
@@ -190,6 +193,15 @@ export default defineComponent({
     }
 
   }
+
+  .search-dropdown {
+  background: transparent;
+  border: none;
+
+  .menuArrow {
+    background: transparent;
+  }
+}
 
   @keyframes menu {
     from { transform: translate3d( 0, 30px ,0 ) }
