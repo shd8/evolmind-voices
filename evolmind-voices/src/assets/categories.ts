@@ -1,6 +1,6 @@
 export default [
   {
-    category: 'All songs',
+    category: 'All categories',
     tag: '',
   },
   {

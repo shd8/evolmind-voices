@@ -51,6 +51,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 @import '../styles/_colors.scss';
+@import '../assets/_global-styles.scss';
 
 div {
   display: flex;
@@ -106,7 +107,7 @@ img {
   background-color: $base;
 }
 
-@media (max-width: 500px) {
+@media (max-width: $mobile) {
   div {
     padding: 0em 2em;
   }

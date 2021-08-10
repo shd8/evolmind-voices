@@ -1,5 +1,8 @@
 @import '../styles/colors';
 
+$mobile: 480px;
+$tablet: 720px;
+
 .hrItem {
     width: 95%;
     background-color: $details;

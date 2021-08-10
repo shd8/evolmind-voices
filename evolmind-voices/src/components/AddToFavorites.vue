@@ -18,8 +18,8 @@ export default defineComponent({
 @import '../styles/_colors.scss';
 
 em {
-    padding: 0.5em;
-    color: $details;
+  padding: 0.5em;
+  color: $details;
 }
 
 </style>
